@@ -41,11 +41,11 @@ jobs:
 
         # The name of the user that will be displayed as the author of the commit
         # Default: author of the commit that triggered the run
-        author_name: Your Name
+        author_name: Daniel Canetti
 
         # The email of the user that will be displayed as the author of the commit
         # Default: author of the commit that triggered the run
-        author_email: mail@example.com
+        author_email: info@danielcanetti.com
 
         # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
         # Default: '.'
