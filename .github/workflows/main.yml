@@ -6,10 +6,6 @@ name: Create Eleventy Site
 # events but only for the master branch
 on:
   workflow_dispatch:
-    name:
-      description: 'Site name'
-      required: true
-      default: 'My Eleventy Site'
     home:
       description: 'location'
       required: false
@@ -29,8 +25,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Create Eleventy site
       run: |
-        mkdir ${{ github.event.inputs.name }}
-        cd ${{ github.event.inputs.name }}
+        mkdir new-eleventy-site
+        cd new-eleventy-site
         npm install @11ty/eleventy
         touch .eleventyignore
         touch .eleventy.js
