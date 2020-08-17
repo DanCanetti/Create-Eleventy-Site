@@ -31,6 +31,42 @@ jobs:
         touch .eleventyignore
         touch .eleventy.js
         touch README.md
-        git add .
-        git commit -m "Create site"
-        git push
+       
+    # Check-in new site   
+    - uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+      with:
+        # The arguments for the `git add` command (see the paragraph below for more info)
+        # Default: '.'
+        add: '.'
+
+        # The name of the user that will be displayed as the author of the commit
+        # Default: author of the commit that triggered the run
+        author_name: Your Name
+
+        # The email of the user that will be displayed as the author of the commit
+        # Default: author of the commit that triggered the run
+        author_email: mail@example.com
+
+        # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
+        # Default: '.'
+        cwd: '.'
+
+        # Whether to use the --force option on `git add`, in order to bypass eventual gitignores
+        # Default: false
+        force: false
+
+        # Whether to use the --signoff option on `git commit`
+        # Default: false
+        signoff: false
+
+        # The message for the commit
+        # Default: 'Commit from GitHub Actions'
+        message: 'Create new eleventy site'
+
+        # Name of the branch to use, if different from the one that triggered the workflow
+        # Default: the branch that triggered the workflow (from GITHUB_REF)
+        ref: 'master'
+
+      env:
+        # This is necessary in order to push a commit to the repo
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
