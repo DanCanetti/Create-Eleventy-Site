@@ -10,5 +10,5 @@ RUN apt-get -y install build-essential
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY create.sh /create.sh
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
+# Code file to execute when the docker container starts up
 ENTRYPOINT ["/create.sh"]
