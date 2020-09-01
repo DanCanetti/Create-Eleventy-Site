@@ -2,8 +2,8 @@
 FROM ubuntu:latest
 
 # Run node install
-RUN apt-get update
-RUN apt-get -y install nodejs
+#RUN apt-get update
+#RUN apt-get -y install nodejs
 RUN apt-get -y install npm
 RUN apt-get -y install build-essential
 
