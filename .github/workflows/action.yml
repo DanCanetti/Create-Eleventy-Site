@@ -35,14 +35,14 @@ jobs:
              npm install @11ty/eleventy
              touch .eleventyignore
              echo "REAMDE.md
-             _assets/" > .eleventyignore
+             assets/" > .eleventyignore
              echo "module.exports = {
               dir: {
                   output: "docs"
               }
              };" > .eleventy.js
              echo "# Your Site Name" > REAMDE.md
-             mkdir _assets
+             mkdir assets
              mkdir partials
              cd partials 
              echo "/* Reset */
@@ -61,6 +61,7 @@ jobs:
              @import 'modules';
              @import 'pages';
              " > main.scss
+             cd ../
       - name: Check in
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
