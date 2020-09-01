@@ -7,7 +7,6 @@ apt-get -y install build-essential
 mkdir eleventy-site
 cd eleventy-site
 npm install @11ty/eleventy
-cd eleventy-site
 echo "Eleventy installed."
 touch .eleventyignore
 touch .eleventy.js
