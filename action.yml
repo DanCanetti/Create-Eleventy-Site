@@ -2,6 +2,8 @@
 
 name: Create Eleventy Site
 description: Quickly create an Eleventy website. 
+icon: box
+color: gray-dark
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
