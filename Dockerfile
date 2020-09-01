@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM ubuntu:latest
+FROM debian:stable
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY create.sh /create.sh
