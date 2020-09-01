@@ -19,52 +19,33 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Setup Node
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Runs a set of commands using the runners shell
+      # Create Eleventy Site
       - name: Create Eleventy site
         run: |
              mkdir eleventy-site
              cd eleventy-site
              npm install @11ty/eleventy
              touch .eleventyignore
+             echo "REAMDE.md" > .eleventyignore
              touch .eleventy.js
              touch README.md
+             echo "Don't forget to point the build dir to docs." > REAMDE.md
       #- name: Create Eleventy site
       #  uses: ./
       # Check-in new site   
-      - name: Commit
-        uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+      - name: Commit change to repo
+        uses: EndBug/add-and-commit@v4
         with:
-          # The arguments for the `git add` command (see the paragraph below for more info)
-          # Default: '.'
-          add: '.'
-          # The name of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_name: Daniel Canetti
-          # The email of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_email: info@danielcanetti.com
-          # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
-          # Default: '.'
-          cwd: '.'
-          # Whether to use the --force option on `git add`, in order to bypass eventual gitignores
-          # Default: false
-          force: false
-          # Whether to use the --signoff option on `git commit`
-          # Default: false
-          signoff: false
-          # The message for the commit
-          # Default: 'Commit from GitHub Actions'
-          message: 'Create new eleventy site'
-          # Name of the branch to use, if different from the one that triggered the workflow
-          # Default: the branch that triggered the workflow (from GITHUB_REF)
-          ref: 'master'
+          message: "New eleventy site created"
+          add: "eleventy-site/"
+          force: true
         env:
-          # This is necessary in order to push a commit to the repo
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
