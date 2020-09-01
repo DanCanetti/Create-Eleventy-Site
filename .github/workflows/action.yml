@@ -38,9 +38,6 @@ jobs:
              touch .eleventy.js
              touch README.md
              echo "Don't forget to point the build dir to docs." > REAMDE.md
-             git add .
-             git commit -m "Create eleventy site"
-             git push
       # Check-in new site   
       #- name: Commit change to repo
       #  uses: EndBug/add-and-commit@v4
@@ -51,3 +48,7 @@ jobs:
       #    cwd: './path/to/the/repo'
       #  env:
       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkin
+        uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply php-cs-fixer changes
