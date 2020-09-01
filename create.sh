@@ -2,8 +2,9 @@
 
 mkdir new-eleventy-site
 cd new-eleventy-site
+apt install curl
 curl -sL https://rpm.nodesource.com/setup | bash -
-yum install -y nodejs
+apt install nodejs
 npm install @11ty/eleventy
 touch .eleventyignore
 touch .eleventy.js
