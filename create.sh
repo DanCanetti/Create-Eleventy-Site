@@ -2,7 +2,7 @@
 
 mkdir new-eleventy-site
 cd new-eleventy-site
-apt install nodejs
+sudo apt install nodejs
 npm install @11ty/eleventy
 touch .eleventyignore
 touch .eleventy.js
