@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Run node install
-#RUN apt-get install node
+RUN pkg install node
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY create.sh /create.sh
