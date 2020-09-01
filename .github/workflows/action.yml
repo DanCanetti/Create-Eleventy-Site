@@ -29,11 +29,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Create Eleventy site
         run: mkdir eleventy-site
-        run: cd eleventy-site
-        run: npm install @11ty/eleventy
-        run: touch .eleventyignore
-        run: touch .eleventy.js
-        run: touch README.md
+             cd eleventy-site
+             npm install @11ty/eleventy
+             touch .eleventyignore
+             touch .eleventy.js
+             touch README.md
       #- name: Create Eleventy site
       #  uses: ./
       # Check-in new site   
