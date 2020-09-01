@@ -2,7 +2,7 @@
 
 mkdir eleventy-site
 echo "Directoy created."
-cd new-eleventy-site
+cd eleventy-site
 npm install @11ty/eleventy
 echo "Eleventy installed."
 cd ../
