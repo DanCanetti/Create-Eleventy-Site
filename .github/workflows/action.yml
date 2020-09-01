@@ -45,7 +45,7 @@ jobs:
         uses: EndBug/add-and-commit@v4
         with:
           message: "New eleventy site created"
-          add: "eleventy-site/"
+          add: "."
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
