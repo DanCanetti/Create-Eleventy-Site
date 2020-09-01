@@ -34,21 +34,34 @@ jobs:
              cd eleventy-site
              npm install @11ty/eleventy
              touch .eleventyignore
-             echo "REAMDE.md" > .eleventyignore
-             touch .eleventy.js
-             touch README.md
-             echo "Don't forget to point the build dir to docs." > REAMDE.md
-      # Check-in new site   
-      #- name: Commit change to repo
-      #  uses: EndBug/add-and-commit@v4
-      #  with:
-      #    message: "New eleventy site created"
-      #    add: "."
-      #    force: true
-      #    cwd: './path/to/the/repo'
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Checkin
+             echo "REAMDE.md
+             _assets/" > .eleventyignore
+             echo "module.exports = {
+              dir: {
+                  output: "docs"
+              }
+             };" > .eleventy.js
+             echo "# Your Site Name" > REAMDE.md
+             mkdir _assets
+             mkdir partials
+             cd partials 
+             echo "/* Reset */
+             * { box-sizing: border-box; }
+             html, body, ul, ol { margin:  0; padding: 0; }
+             p { margin: 0px; }
+             " > _reset.scss
+             echo "/* Base */" > _base.scss
+             echo "/* Layout */" > _layout.scss
+             echo "/* Modules */" > _modules.scss
+             echo "/* Pages */" > _pages.scss
+             echo "/* Main */
+             @import 'reset';
+             @import 'base';
+             @import 'layout';
+             @import 'modules';
+             @import 'pages';
+             " > main.scss
+      - name: Check in
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply php-cs-fixer changes
