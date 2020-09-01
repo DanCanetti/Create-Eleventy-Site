@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Run node install
-RUN --rm -it ubuntu:latest
+RUN -it ubuntu:latest
 RUN apt-get install nodejs
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
