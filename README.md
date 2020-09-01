@@ -2,7 +2,7 @@
 
 Create an [Eleventy](https://www.11ty.dev/) website directly in your Repo.
 
-[![GitHub license](https://img.shields.io/github/license/DanCanetti/Create-Eleventy-Site.svg)](https://github.com/DanCanetti/Create-Eleventy-Site//blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/release/DanCanetti/Create-Eleventy-Site.svg)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/releases/) [![GitHub stars](https://img.shields.io/github/stars/DanCanetti/Create-Eleventy-Site.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/stargazers/) [![GitHub issues](https://img.shields.io/github/issues/DanCanetti/Create-Eleventy-Site.svg)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/issues/)
+[![GitHub license](https://img.shields.io/github/license/DanCanetti/Create-Eleventy-Site.svg)](https://github.com/DanCanetti/Create-Eleventy-Site//blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/release/DanCanetti/Create-Eleventy-Site.svg)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/releases/) [![GitHub commits](https://img.shields.io/github/commits-since/DanCanetti/Create-Eleventy-Site/v1.0.0.svg)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/commit/) [![GitHub issues](https://img.shields.io/github/issues/DanCanetti/Create-Eleventy-Site.svg)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/issues/) [![GitHub stars](https://img.shields.io/github/stars/DanCanetti/Create-Eleventy-Site.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/DanCanetti/Create-Eleventy-Site/stargazers/)
 
 
 ### What is created
