@@ -1,4 +1,8 @@
-# Create Eleventy site
+# This project is now archived
+
+---
+
+## Create Eleventy site
 
 Create an [Eleventy](https://www.11ty.dev/) website directly in your Repo.
 
